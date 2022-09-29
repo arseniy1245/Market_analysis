@@ -9,7 +9,7 @@ var ii = 0;
 for (let file_name of files) {
     let ARR = fs.readFileSync(dir + '/' + file_name, 'utf-8').split('\n');
 
-for(let i = 0; i < ARR.length; i++){
+for(let i = 0; i < ARR.length - 1; i++){
 	let lineArr = ARR[i].split(",");
 	
 	ttlP += (Number(lineArr[3]) / Number(lineArr[1]) - 1);
