@@ -12,8 +12,8 @@ for (let file_name of files) {
 for(let i = 0; i < ARR.length; i++){
 	let lineArr = ARR[i].split(",");
 	
-	ttlP += (lineArr[3] / lineArr[1] - 1);
+	ttlP += (Number(lineArr[3]) / Number(lineArr[1]) - 1);
 	ii++;
 	}
 }
-console.log((ttlP / ii).toFixed(5));
+console.log("result",(ttlP / ii).toFixed(5));
