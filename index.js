@@ -81,11 +81,11 @@ async function download(file_name, period)
     zip.extractAllTo(path_download + period, true);
     
 
-    if(period == '1h')
-    {
-        let date = `date,${file_name.slice(11,file_name.length)}.csv\n`;
-        fs.appendFileSync('./y.txt', date + fs.readFileSync(`${path_download}/${period}/${file_name}.csv`, 'utf-8'));
-    }
+    // if(period == '1h')
+    // {
+    //     let date = `date,${file_name.slice(11,file_name.length)}.csv\n`;
+    //     fs.appendFileSync('./y.txt', date + fs.readFileSync(`${path_download}/${period}/${file_name}.csv`, 'utf-8'));
+    // }
     
     console.log('Successfully downloaded: ' + file_name)
 }
