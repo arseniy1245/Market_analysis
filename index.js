@@ -5,10 +5,27 @@ const got = require('got');
 const fs = require('fs');
 const AdmZip = require('adm-zip');
 
+
+
+const PAIR = 'SOLUSDT';
+const TF = [
+    '1m',
+
+    '1d',
+    '2h',
+    '1h',
+    '30m',
+    '15m',
+    '5m',
+    '3m',
+]
+
+
+
 const path_main = 'y.txt';  //  C:/Arseniy/all_progs/Antares/data/klines/csv/1h/BTCUSDT-1h-2021-03-01.csv
-const path_1m = 'C:/Arseniy/all_progs/Antares/data/klines/csv/1m/BTCUSDT-1m-';
-const path_csv_1h = './data/klines/csv/1h';
-const path_download = './data/klines/csv/';
+const path_1m = `C:/Arseniy/all_progs/Antares/data/klines/${PAIR}/csv/1m/${PAIR}-1m-`;
+const path_csv_1h = `./data/klines/${PAIR}/csv/1h`;
+const path_download = `./data/klines/${PAIR}/csv/`;
 
 
 get_data();
@@ -53,12 +70,12 @@ function transform_date_to_file_name(ms,i,period)
 {
     let t = new Date(ms);
     let arr_date = new Date(t.setDate(t.getDate() + i)).toLocaleDateString().split('.');
-    return `BTCUSDT-${period}-${arr_date[2]}-${arr_date[1]}-${arr_date[0]}`;
+    return `${PAIR}-${period}-${arr_date[2]}-${arr_date[1]}-${arr_date[0]}`;
 }
 
 async function download(file_name, period)
 {
-    let url = `https://data.binance.vision/data/spot/daily/klines/BTCUSDT/${period}/${file_name}.zip`;
+    let url = `https://data.binance.vision/data/spot/daily/klines/${PAIR}/${period}/${file_name}.zip`;
     const data = await got.get(url).buffer();
     const zip = new AdmZip(data);
     zip.extractAllTo(path_download + period, true);
@@ -92,8 +109,23 @@ function get_data()
     {
         if(i <= delt)
         {
-            await download(transform_date_to_file_name(last_t,i,'1h'),'1h');
-            await download(transform_date_to_file_name(last_t,i,'1m'),'1m');
+            for (let i2 = 0; i2 < TF.length; i2++) {
+                download(transform_date_to_file_name(last_t,i,TF[i2]),TF[i2]);
+            }
+            // function d() {
+            //     download(transform_date_to_file_name(last_t,i,TF[i]),TF[i]);
+            //     i++;
+            // }
+
+            //await download(transform_date_to_file_name(last_t,i,TF[0]),TF[0]);
+
+            // await download(transform_date_to_file_name(last_t,i,TF[1]),TF[1]);
+            // await download(transform_date_to_file_name(last_t,i,TF[2]),TF[2]);
+            // await download(transform_date_to_file_name(last_t,i,TF[3]),TF[3]);
+            // await download(transform_date_to_file_name(last_t,i,TF[4]),TF[4]);
+            // await download(transform_date_to_file_name(last_t,i,TF[5]),TF[5]);
+            // await download(transform_date_to_file_name(last_t,i,TF[6]),TF[6]);
+            // await download(transform_date_to_file_name(last_t,i,TF[7]),TF[7]);
             i++;
             check_and_download();
         }
