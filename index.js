@@ -7,7 +7,9 @@ const AdmZip = require('adm-zip');
 
 
 
-const PAIR = 'SOLUSDT';
+
+
+const PAIR = 'XRPUSDT';
 const TF = [
     '1m',
 
@@ -22,7 +24,9 @@ const TF = [
 
 
 
-const path_main = 'y.txt';  //  C:/Arseniy/all_progs/Antares/data/klines/csv/1h/BTCUSDT-1h-2021-03-01.csv
+
+
+// const path_main = 'y.txt';  //  C:/Arseniy/all_progs/Antares/data/klines/csv/1h/BTCUSDT-1h-2021-03-01.csv
 const path_1m = `C:/Arseniy/all_progs/Antares/data/klines/${PAIR}/csv/1m/${PAIR}-1m-`;
 const path_csv_1h = `./data/klines/${PAIR}/csv/1h`;
 const path_download = `./data/klines/${PAIR}/csv/`;
@@ -38,8 +42,8 @@ var ttl_ex = 0;
 var ttl_profit = 0;
 var ttl_green = 0;
 
-var csv = fs.readFileSync(path_main, 'utf-8');
-var arr_of_csv = csv.split('\n');
+// var csv = fs.readFileSync(path_main, 'utf-8');
+// var arr_of_csv = csv.split('\n');
 
 
 //? ===================================================

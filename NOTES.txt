@@ -4,6 +4,20 @@
 a6 - среднее значение % откр - макс
 a7 - считает лучший процент (покупка при открытии, продажа при достижении опр. процента, если нет, то при закрытии)
 
+MAIN:
+
+    BEK_0.0.1(fix) (BUY EVERY KLINE) - 
+        -Можно использовать для любых тф и пар
+        -Сумма сделки всегда фиксированная
+        -Покупать при открытии, продавать либо при достижении опр. процента, либо при закрытии свечи
+
+    BEK_0.0.1(diff) (BUY EVERY KLINE) - 
+        -Можно использовать для любых тф и пар
+        -Сумма сделки весь баланс (сложный процент)
+        -Покупать при открытии, продавать либо при достижении опр. процента, либо при закрытии свечи
+
+
+
 Потерянные минуты:
 BTCUSDT-1m-2021-03-06.csv - 1351
 BTCUSDT-1m-2021-04-20.csv - 1291
@@ -132,3 +146,215 @@ BTCUSDT-1m-2021-09-29.csv - 1321
     09.2022 11.8% 0.00130 672 539 133  ~80.21%
 
     TTL profit = 421%
+
+
+
+[BEK_0.0.1(fix)]: (создано 30.09.22)
+    BTCUSDT:
+        From: 0.00060 to: 0.00700
+        TF: 1d
+        ----
+        Total profit: 31.7% 
+        Best perc: 0.00391
+        Succ/Loss: 528/50 ~91.3%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 2h
+        ----
+        Total profit: 162.5% 
+        Best perc: 0.00220
+        Succ/Loss: 5574/1358 ~80.4%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 1h
+        ----
+        Total profit: 271.6% 
+        Best perc: 0.00290
+        Succ/Loss: 8612/5248 ~62.1%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 30m
+        ----
+        Total profit: 162.4% 
+        Best perc: 0.00304
+        Succ/Loss: 12491/15224 ~45.1%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 15m
+        ----
+        Total profit: 268.7% 
+        Best perc: 0.00172
+        Succ/Loss: 29788/25640 ~53.7%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 5m
+        ----
+        Total profit: 3.1% 
+        Best perc: 0.00334
+        Succ/Loss: 17887/148395 ~10.8%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 3m
+        ----
+        Total profit: 0.0% 
+        Best perc: 0.00000
+        Succ/Loss: 0/0 ~NaN%
+
+
+        From: 0.0006 to: 0.007
+        TF: 1m
+        ----
+        Total profit: 57.0% 
+        Best perc: 0.00423
+        Succ/Loss: 7243/824163 ~0.9%
+
+
+
+    SOLUSDT:
+        From: 0.00060 to: 0.00700
+        TF: 1d
+        ----
+        Total profit: 66.4% 
+        Best perc: 0.00692
+        Succ/Loss: 523/55 ~90.5%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 2h
+        ----
+        Total profit: 138.6% 
+        Best perc: 0.00192
+        Succ/Loss: 6296/636 ~90.8%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 1h
+        ----
+        Total profit: 230.6% 
+        Best perc: 0.00447
+        Succ/Loss: 9353/4507 ~67.5%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 30m
+        ----
+        Total profit: 17.8% 
+        Best perc: 0.00591
+        Succ/Loss: 12256/15459 ~44.2%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 15m
+        ----
+        Total profit: 221.2% 
+        Best perc: 0.00586
+        Succ/Loss: 17083/38345 ~30.8%
+
+
+        From: 0.0006 to: 0.007
+        TF: 5m
+        ----
+        Total profit: 0.0% 
+        Best perc: 0.00000
+        Succ/Loss: 0/0 ~NaN%
+
+
+    ETHUSDT:
+        From: 0.00060 to: 0.00700
+        TF: 1d
+        ----
+        Total profit: 19.2% 
+        Best perc: 0.00700
+        Succ/Loss: 506/72 ~87.5%
+
+        From: 0.0006 to: 0.007
+        TF: 2h
+        ----
+        Total profit: 127.0% 
+        Best perc: 0.00167
+        Succ/Loss: 6174/758 ~89.1%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 1h
+        ----
+        Total profit: 232.7% 
+        Best perc: 0.00316
+        Succ/Loss: 9357/4503 ~67.5%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 30m
+        ----
+        Total profit: 94.9% 
+        Best perc: 0.00378
+        Succ/Loss: 13024/14691 ~47.0%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 15m
+        ----
+        Total profit: 229.6% 
+        Best perc: 0.00298
+        Succ/Loss: 23355/32073 ~42.1%
+
+
+        From: 0.0006 to: 0.007
+        TF: 5m
+        ----
+        Total profit: 25.5% 
+        Best perc: 0.00581
+        Succ/Loss: 9354/156928 ~5.6%
+
+
+
+    BNBUSDT:
+        From: 0.00060 to: 0.00700
+        TF: 1d
+        ----
+        Total profit: 60.3%
+        Best perc: 0.00700
+        Succ/Loss: 499/79 ~86.3%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 2h
+        ----
+        Total profit: 31.5%
+        Best perc: 0.00167
+        Succ/Loss: 6016/916 ~86.8%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 1h
+        ----
+        Total profit: 131.1% 
+        Best perc: 0.00331
+        Succ/Loss: 8726/5158 ~62.8%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 30m
+        ----
+        Total profit: 0.0%
+        Best perc: 0.00000
+        Succ/Loss: 0/0 ~NaN%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 15m
+        ----
+        Total profit: 60.9% 
+        Best perc: 0.00381
+        Succ/Loss: 16621/38807 ~30.0%
+
+
+
+    XRPUSDT:
+        
