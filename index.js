@@ -9,7 +9,7 @@ const AdmZip = require('adm-zip');
 
 
 
-const PAIR = 'AVAXUSDT';
+const PAIR = 'NEARUSDT';
 const TF = [
     '1m',
 
