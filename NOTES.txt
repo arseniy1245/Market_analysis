@@ -355,6 +355,14 @@ BTCUSDT-1m-2021-09-29.csv - 1321
         Succ/Loss: 16621/38807 ~30.0%
 
 
+        From: 0.00060 to: 0.00700
+        TF: 5m
+        ----
+        Total profit: 0.0% 
+        Best perc: 0.00000
+        Succ/Loss: 0/0 ~NaN%  
+
+
 
     XRPUSDT:
         From: 0.00060 to: 0.00700
@@ -371,3 +379,27 @@ BTCUSDT-1m-2021-09-29.csv - 1321
         Total profit: 184.0% 
         Best perc: 0.00678
         Succ/Loss: 3788/3143 ~54.7%
+
+
+        From: 0.00060 to: 0.00700
+        TF: 1h
+        ----
+        Total profit: 259.5%
+        Best perc: 0.00678
+        Succ/Loss: 5592/8267 ~40.3%
+
+
+        From: 0.0006 to: 0.007
+        TF: 30m
+        ----
+        Total profit: 125.8%
+        Best perc: 0.00676
+        Succ/Loss: 7448/20266 ~26.9%
+
+
+        From: 0.0006 to: 0.007
+        TF: 15m
+        ----
+        Total profit: 206.9%
+        Best perc: 0.00676
+        Succ/Loss: 9079/46348 ~16.4%

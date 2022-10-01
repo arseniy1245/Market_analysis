@@ -9,7 +9,7 @@ const AdmZip = require('adm-zip');
 
 
 
-const PAIR = 'XRPUSDT';
+const PAIR = 'ZECUSDT';
 const TF = [
     '1m',
 

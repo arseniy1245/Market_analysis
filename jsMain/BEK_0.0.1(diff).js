@@ -1,11 +1,12 @@
 const fs = require('fs');
 
 const PERC_from = 0.00060;  //0.00060
-const PERC_to = 0.00700;    //0.00700
+const PERC_to = 0.00060;    //0.00700
 const PAIR = 'BTCUSDT';
 const TF = '1h';
+const CSV = true;
 
-
+const csvResults = './csvResults/all.csv';
 const dir = `./data/klines/${PAIR}/csv/${TF}`
 const files = fs.readdirSync(dir);
 
@@ -49,3 +50,12 @@ for (let PERC = PERC_from; PERC <= PERC_to; PERC += 0.00001) {
 }
 console.log('----\nEnd sum: ' + (max).toFixed(1) + 'USDT',
  '\nBest perc: ' + p.toFixed(5) + '\nSucc/Loss: ' + succ +'/'+ loss, '~'+(succ / (succ + loss) * 100).toFixed(1)+'%');
+
+//  if(CSV === true) {
+//     let tx = 
+//     `${PAIR};`
+//     //fs.writeFileSync(`${csvResults}${PAIR}-${TF}-${Date.parse(new Date)}.csv`,)
+
+//     fs.appendFileSync(csvResults)
+
+//  }

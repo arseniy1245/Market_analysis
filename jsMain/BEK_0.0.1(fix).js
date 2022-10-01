@@ -3,7 +3,7 @@ const fs = require('fs');
 const PERC_from = 0.00060;  //0.00060
 const PERC_to = 0.00700;    //0.00700
 const PAIR = 'XRPUSDT';
-const TF = '1h';
+const TF = '3m';
 
 // node "jsMain\BEK_0.0.1(fix).js"
 
