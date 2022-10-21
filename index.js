@@ -9,7 +9,7 @@ const AdmZip = require('adm-zip');
 
 
 
-const PAIR = 'NEARUSDT';
+const PAIR = 'BTCUSDT';
 const TF = [
     '1m',
 
@@ -114,6 +114,7 @@ function get_data()
         if(i <= delt)
         {
             for (let i2 = 0; i2 < TF.length; i2++) {
+                //console.log(last_t,i,TF[i2],TF[i2])
                 download(transform_date_to_file_name(last_t,i,TF[i2]),TF[i2]);
             }
             // function d() {
