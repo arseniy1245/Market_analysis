@@ -1,0 +1,2 @@
+Best Perc;Profit;Succ;Loss;Ttl
+0.00319;3147.7%;8378;5962;14340
