@@ -8,7 +8,7 @@ var allArr = [];
 for (let FileName of files) {
     var hArr = [];
     let m = FileName.split('-');
-   // if(m[2] === '2022' && m[3] === '07') {
+   if(m[2] === '2022' && m[3] === '09') {
         let ARR = fs.readFileSync(dir +'/'+ FileName, 'utf-8').split('\n');
         for (let i = 0; i < ARR.length - 1; i++) {
             var lineArr = ARR[i].split(',');
@@ -30,7 +30,7 @@ for (let FileName of files) {
                 allArr.push(hArr);
             }
         }
-    //}
+    }
 }
 // console.log(allArr)
 
